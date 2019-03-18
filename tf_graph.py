@@ -161,7 +161,12 @@ Check-point
 ###=============================Graph_def && NodeDef ==============================================
 Graph_def：
 	定义：	Tensorflow 中 Graph 和它的序列化表示 Graph_def。
-	tf.Operation 的序列化 ProtoBuf 是 NodeDef，但grph_def 不包括tf.Variable，需要加载MetaGraph得到variable
+			tf.Operation 的序列化 ProtoBuf 是 NodeDef，但grph_def 不包括tf.Variable，需要加载MetaGraph得到variable
+			
+	API:
+		graph.as_graph_def()
+		graph_pb2.GraphDef()
+		
 NodeDef:
 	从 python Graph中序列化出来的图就叫做 GraphDef（这是一种不严格的说法，先这样进行理解）。
 	而 GraphDef 又是由许多叫做 NodeDef 的 Protocol Buffer 组成。
